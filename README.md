@@ -2,6 +2,8 @@ One gateway in front of many coding-agent CLIs. This repo ships the adapter inte
 
 You need this if you run 2+ coding-agent CLIs and want one remote control surface. If you use a single harness, its own CLI is enough.
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 Agent *harnesses* multiply faster than the ways to reach them. One working answer exists (pingdotgg/t3code: a local service + iOS/Web/Console remote that controls six harnesses), and its most under-appreciated part is not the UI — it is the **adapter layer**: six heterogeneous CLIs reduced to a uniform "list sessions / send input / poll events" contract. That layer is treated as an implementation detail when it is really the API-server position of the agent ecosystem. The gap: no open, testable *specification* of that contract that new harness adapters can be written against.
